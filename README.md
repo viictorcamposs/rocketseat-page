@@ -8,9 +8,9 @@
 Resolvi me basear no próprio design da home page da plataforma de ensino.
 
 ### Demo
-<h1 align="center">
-  <img src="readmefiles/desafiofrontend.gif" width="500px">
-</h1>
+<p align="center">
+<img src="readmefiles/desafiofrontend.gif" width="500" height="250">
+</p>
 
 ---
 ## Desafio
