@@ -1,0 +1,317 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+:root {
+  --main-color: #7550db;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  
+}
+#main {
+  height: 100vh;
+  
+  background: url("https://rocketseat.com.br/static/images/update/melhores-tecnologias.svg") no-repeat;
+  background-position: 60vw 40vh;
+}
+
+/* ========= HEADER ========= */
+header{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--main-color);
+
+  padding: 30px;
+  background-color: var(--main-color);
+  box-shadow: 0 0 1px var(--main-color);
+}
+.links {
+  text-align: center;
+  padding: 10px;
+}
+.links a {
+  margin: 0 20px;
+  color: white;
+  opacity: 0.7;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.links a:hover {
+  font-weight: bold;
+  opacity: 1;
+  transition: 100ms;
+  border-bottom: 2px solid #fff;
+}
+.links #about {
+  color: white;
+  opacity: 1;
+  border-bottom: 2px solid white;
+}
+.main-header {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  
+  max-width: 1200px;
+  align-items: center;
+}
+.main-header .nav {
+  display: flex;
+  padding-left: 90px;
+}
+.main-header #logo {
+  
+  border-radius: 30px;
+  border-right: 2px solid white;
+  padding-right: 25px;
+}
+.main-header .contact {
+  align-items: center;
+  display: flex;
+  -webkit-box-align: center;
+}
+.main-header .contact a {
+  padding: 10px;
+}
+.main-header .contact a#button-login {
+  background-color: white;
+  color: var(--main-color);
+  line-height: 38px;
+  font-weight: bold;
+
+  border-radius: 25px;
+  padding: 0px 30px;
+
+  font-size: 14px;
+  margin-left: 60px;
+}
+.main-header .contact a#button-login:hover {
+  background-color: rgba(255,255,255,0.9);
+  transition: 200ms;
+  cursor: pointer;
+}
+.main-header .contact a img {
+  height: 20px;
+  width: 25px;
+}
+
+/* ========= MAIN ========= */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  max-width: 700px;
+  padding: 25px;
+}
+#wrapper img {
+  border-radius: 50%;
+  box-shadow: 0 0 5px #000;
+  height: 150px;
+  width: 150px;
+}
+#wrapper h1 {
+  max-width: 300px;
+  font-size: 42px;
+  margin: 15px auto 0;
+
+  opacity: 0.9;
+  color: #322097f5;
+}
+#wrapper h2 {
+  max-width: 640px;
+  text-align: center;
+  line-height: 35px;
+  margin: 15px auto 30px;
+
+  font-size: 25px;
+  opacity: 0.7;
+} 
+#wrapper a strong {
+  color: #fff;
+  background: #322097f5;
+
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: 400ms;
+}
+#wrapper a strong:hover {
+  opacity: 0.8;
+  transition: 200ms;
+}
+
+/* ========= SECTION  ========= */
+#main section {
+  width: 100%;
+  height: 450px;
+  position: relative;
+
+  margin: 20px auto 20px;
+  background-color: var(--main-color);
+}
+#main section h1 {
+  color: white;
+  opacity: 0.9;
+  font-size: 35px;
+
+  text-align: center;
+  padding-top: 35px;
+}
+#main section .cards {
+  width: 100%;
+  height: 365px;
+
+  position: absolute;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#main section .cards .card {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+#main section .card .card-image img {
+  height: 100px;
+
+  margin-top: 30px;
+  border-radius: 50%;
+}
+#main section .card .card-content h2 {
+  margin: 25px auto 0;
+  font-size: 25px;
+  opacity: 0.9;
+}
+#main section .card .card-content p {
+  margin: 25px auto 0;
+  max-width: 270px;
+  opacity: 0.6;
+}
+#main section .card .card-content .title {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* ========= MODAL =========== */
+section#modal {
+  background-color: rgba(0, 0, 0, 0.95);
+
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  opacity: 0;
+
+  visibility: hidden;
+  transition: 300ms;
+}
+section#modal .bg-main {
+  background-color: none;
+  margin: 0 auto;
+  position: relative;
+
+  width: 50%;
+  height: 100%;
+}
+section#modal .bg-main .close-modal img {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  margin: 20px 10px 0 0;
+  cursor: pointer;
+}
+section#modal .bg-login {
+  background-color: none;
+  margin: 0px auto;
+
+  position: relative;
+  width: 92%;
+  height: 100%;
+}
+section#modal .bg-login .modal-content {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+
+  position: relative;
+  text-align: center;
+  padding-top: 120px;
+} 
+
+/* ========= MODAL active =========== */
+section#modal.active {
+  opacity: 1;
+  visibility: visible;
+
+  transition: 300ms;
+}
+
+/* ========= Login-Space ============ */
+section#modal .bg-login .modal-content img {
+  height: 100px;
+  margin-bottom: 25px;
+}
+section#modal input{
+  background-color: #e0e0e0;
+  width: 25vw;
+  height: 45px;
+  padding-left: 10px;
+
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
+
+  margin-bottom: 15px;
+}
+section#modal .bg-login .modal-content a {
+  color: rgb(213, 234, 253);
+  opacity: 0.9;
+}
+section#modal .bg-login .modal-content a:hover {
+  opacity: 1;
+  transition: 100ms;
+}
+section#modal .bg-login .modal-content a span {
+  color: var(--main-color);
+  opacity: 0.9;
+}
+section#modal .bg-login .modal-content a span:hover {
+  opacity: 1;
+  transition: 100ms;
+}
+section#modal .bg-login .login {
+ display: flex;
+ flex-direction: column;
+
+ font-weight: bold;
+ color: white;
+ background-color: rgb(91, 65, 236);
+
+ max-width: 26vw;
+ margin: 20px auto 20px;
+
+ padding: 16px 0px;
+ border-radius: 5px;
+ border: 1px solid var(--main-color);
+
+ transition: 200ms;
+}
+section#modal .bg-login .login:hover {
+  background-color: rgba(91,65,236, 0.9);
+  transition: 200ms;
+  border: 1px solid white;
+}

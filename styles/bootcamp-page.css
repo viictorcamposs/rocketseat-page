@@ -1,0 +1,194 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80') no-repeat;
+  color: white;
+}
+
+/* ============== Menu de Navegação ================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 0 5px black;
+}
+header img {
+  height: 35px;
+}
+.links {
+  padding: 10px;
+}
+.links a {
+  margin: 0 20px;
+  color: white;
+  opacity: 0.7;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.links a:hover {
+  transition: 100ms;
+  border-bottom: 2px solid white;
+  opacity: 1;
+}
+.links .selected-page {
+  opacity: 1;
+ border-bottom: 2px solid white;
+}
+
+/* ============== Bootcamp CARDS ================ */
+section.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+}
+section.cards .card {
+  border: 3px solid black;
+  border-radius: 8px;
+  background-color: rgba(4, 3, 8, 0.95);
+
+  height: 670px;
+
+  padding: 32px;
+  margin: 10px 15px;
+
+  text-align: center;
+  cursor: pointer;
+
+  transition: 400ms;
+}
+section.cards .card span {
+  padding: 15px;
+  border-radius: 50%;
+}
+section.cards .card span.starter {
+  border: 2px solid #9a6ec4;
+}
+section.cards .card span.launchbase {
+  border: 2px solid #ff9f0e;
+}
+section.cards .card span.gostack {
+  border: 2px solid #3bff76ef;
+}
+section.cards .card p {
+  opacity: 0.9;
+  line-height: 25px;
+}
+section.cards .card .starter {
+  color: #9a6ec4;
+}
+section.cards .card .launchbase {
+  color: #ff9f0e;
+  font-weight: bold;
+}
+section.cards .card .gostack {
+  color: #3bff76ef;
+}
+section.cards .card:hover {
+  margin-top: 1px;
+  transition: 200ms;
+}
+section.cards .card.blue:hover { 
+  border: 3px solid #9a6ec4; 
+}
+section.cards .card.orange:hover {
+  border: 3px solid #ff9f0e;
+}
+section.cards .card.green:hover {
+  border: 3px solid #3bff76ef;
+}
+section.cards .card .inside-card {
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.cards .card .inside-card .card-top {
+  display: flex;
+}
+section.cards .card .inside-card .card-content {
+  margin-top: 100px;
+  margin: 100px auto 50px;
+}
+section.cards .card .inside-card .card-info {
+  max-width: 270px;
+}
+
+/* ============== MODAL OVERLAY ================ */
+.modal-overlay {
+  background-color: rgba(0,0,0,0.9);
+  width: 80%;
+  height: 82%;
+
+  position: fixed;
+  top: 16vh;
+  left: 10vw;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+}
+.modal-overlay .buttons {
+  text-align: right;
+  margin: 5px;
+}
+.modal-overlay .close-modal img,
+.modal-overlay .fullscreen img {
+  max-width: 35px;
+  cursor: pointer;
+}
+.modal-overlay .modal {
+  background-color: rgba(255,255,255, 1);
+  width: 95%;
+  height: 90%;
+  top: 0;
+  margin: 0 auto;
+  transition: 300ms;
+}
+.modal-overlay .modal .modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+/* ============== MODAL OVERLAY active ================ */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: 300ms;
+}
+.modal-overlay.maximize {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  transition: 300ms;
+}
+.modal-overlay.maximize .modal {
+  width: 99.5%;
+  height: 94%;
+  transition: 300ms;
+}
+
+.modal-overlay .modal .modal-content {
+  width: 100%;
+  height: 100%;
+}
