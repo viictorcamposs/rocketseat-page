@@ -9,7 +9,7 @@ Resolvi me basear no próprio design da home page da plataforma de ensino.
 
 ### Demo
 <p align="center">
-<img src="readmefiles/desafiofrontend.gif" width="500" height="250">
+<img src="public/readmefiles/desafiofrontend.gif" width="500" height="250">
 </p>
 
 ---
