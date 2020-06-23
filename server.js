@@ -1,9 +1,34 @@
+// PASSO A PASSO PARA CRIAR SERVIDOR E CONFIGURAR PROJETO
+/* 
+ 1 - npm init -y ( criar package.json )
+
+ 2 - npm install express ( instalar pacote express )
+
+ 3 - npm install -D nodemon ( instalar nodemon )
+
+ 4 - npm install nunjucks ( instalar nunjucks )
+*/
+
+const nunjucks = require ('nunjucks')
 const express = require ('express')
 
 const server = express ()
+ 
+server.use (express.static ('public/img'))
+server.use (express.static ('public/styles'))
+server.use (express.static ('public/scripts'))
+
+server.set ('view engine', 'html')
+
+nunjucks.configure ('views', {
+  express: server
+})
 
 server.get ('/', function (req, res) {
-  return res.send ()
+  return res.render ('home')
+})
+server.get ('/bootcamp-page.html', function (req, res) {
+  return res.render ('bootcamp-page')
 })
 
 server.listen (5000, function () {
