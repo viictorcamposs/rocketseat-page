@@ -1,0 +1,84 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Bootcamp</title>
+  <link rel="stylesheet" href="/bootcamp-page.css">
+{% endblock %}
+{% block header %}
+  <img src="https://skylab.rocketseat.com.br/static/media/logo.0ae02df1.svg" alt="logo">
+  <div class="links">
+    <a href="/">Rocketseat</a>
+    <a href="/bootcamp.page" class="selected-page">Bootcamp</a>
+    <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Discord</a>
+    <a href="">Contato</a>
+  </div>
+{% endblock %}
+{% block content %}
+  <section class="cards">
+    <div class="card blue" id="starter">
+      <div class="inside-card">
+        <div class="card-top">
+          <span class="starter">01</span>
+        </div>
+        <div class="card-content">
+          <img src="https://skylab.rocketseat.com.br/static/media/Starter.64c237cc.svg" alt="Starter">
+        </div>
+        <div class="card-info">
+          <p class="paragraph">
+            <strong class="starter">Torne-se um programador desejado</strong>
+            no mercado com esses cursos gratuitos</p>
+        </div>
+      </div>
+    </div>
+    <div class="card orange" id="launchbase">
+      <div class="inside-card">
+        <div class="card-top">
+          <span class="launchbase">02</span>
+        </div>
+        <div class="card-content">
+          <img src="https://skylab.rocketseat.com.br/static/media/LaunchBase.08285320.svg" alt="LaunchBase">
+        </div>
+        <div class="card-info">
+          <p class="paragraph">
+            <strong class="launchbase">Domine programação do zero</strong>
+            e tenha acesso às melhores oportunidades do mercado</p>
+        </div>
+      </div>
+    </div>
+    <div class="card green" id="gostack">
+      <div class="inside-card">
+        <div class="card-top">
+          <span class="gostack">03</span>
+        </div>
+        <div class="card-content">
+          <img src="https://skylab.rocketseat.com.br/static/media/GoStack.83a178a0.svg" alt="GoStack">
+        </div>
+        <div class="card-info">
+          <p class="paragraph">
+            <strong class="gostack">Treinamento imersivo</strong>
+            nas tecnologias mais modernas de desenvolvimento web e mobile</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block modal %}
+  <div class="modal-overlay">
+    <div class="buttons">
+      <a class="fullscreen">
+        <img src="/open_in_full-white-24dp.svg" alt="full screen">
+      </a>
+      <a class="close-modal">
+        <img src="/close-white-24dp.svg" alt="close">
+      </a>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block script %}
+  <script src="/bootcamp-page.js"></script>
+{% endblock %}
