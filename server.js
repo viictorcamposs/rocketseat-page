@@ -11,6 +11,7 @@
 
 const nunjucks = require ('nunjucks')
 const express = require ('express')
+const data = require ('./data')
 
 const server = express ()
  
@@ -28,7 +29,7 @@ server.get ('/', function (req, res) {
   return res.render ('home')
 })
 server.get ('/bootcamp-page.njk', function (req, res) {
-  return res.render ('bootcamp-page')
+  return res.render ('bootcamp-page', { items: data }) 
 })
 
 server.use (function(req, res) {
