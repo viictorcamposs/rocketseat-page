@@ -13,7 +13,7 @@
         <a href="/" id="about">Rocketseat</a>
         <a href="/bootcamp-page.njk">Bootcamp</a>
         <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Discord</a>
-        <a href="">Contato</a>
+        <a class="contato">Contato</a>
       </div>
     </div>
     <div class="contact">
@@ -27,56 +27,30 @@
 {% endblock %}
 {% block content %}
   <div id="wrapper">
-    <img src="https://media-exp1.licdn.com/dms/image/C510BAQFHYedTI-oyWA/company-logo_200_200/0?e=1600905600&v=beta&t=GlUqRmwprv-OUQwKtpUvzxtjsL8BP5EMlEfeAt1ZM1Y" alt="logomarca">
-    <h1>Rocketseat</h1>
-    <h2>Mais do que uma plataforma de educação em tecnologia, uma comunidade incrível de devs em busca do próximo nível</h2>
-    <a href="https://rocketseat.com.br/" target="_blank">
-      <strong>Quero embarcar nesse foguete</strong>
-    </a>
+    {% for data in wrapper %}
+      <img src="{{ data.logoImage }}" alt="Logomarca da {{ data.title }}">
+      <h1>{{ data.title }}</h1>
+      <h2>{{ data.description }}</h2>
+      <a href="{{ data.linkUrl }}" target="_blank">
+        <strong>Quero embarcar nesse foguete</strong>
+      </a>
+    {% endfor %}
   </div>
   <section>
     <h1>As melhores tecnologias em programação</h1>
     <div class="cards">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://rocketseat.com.br/static/images/update/curso-javascript.svg" alt="">
+      {% for card in cards %}
+        <div class="card">
+          <div class="card-image">
+            <img src="{{ card.image }}" alt="Linguagem {{ card.name }}">
+          </div>
+          <div class="card-content">
+            <h2>{{ card.name }}</h2>
+            <p class="title">{{ card.title }}</p>
+            <p>{{ card.subtitle }}</p>
+          </div>
         </div>
-        <div class="card-content">
-          <h2>Javascript</h2>
-          <p class="title">Domine a linguagem de programação</p>
-          <p>Acompanhe o avanço da linguagem</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image">
-          <img src="https://rocketseat.com.br/static/images/update/curso-nodejs.svg" alt="">
-        </div>
-        <div class="card-content">
-          <h2>NodeJS</h2>
-          <p class="title">Construa a base da sua aplicação no back-end</p>
-          <p>Para controlar a lógica e os dados das aplicações web e mobile</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image">
-          <img src="https://rocketseat.com.br/static/images/update/curso-reactjs.svg" alt="">
-        </div>
-        <div class="card-content">
-          <h2>ReactJS</h2>
-          <p class="title">Desenvolva a versão web da sua aplicação</p>
-          <p>Para construir interfaces responsivas e dinâmicas no front-end</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image">
-          <img src="https://rocketseat.com.br/static/images/update/curso-react-native.svg" alt="">
-        </div>
-        <div class="card-content">
-          <h2>React Native</h2>
-          <p class="title">Crie as versões mobile da sua aplicação</p>
-          <p>Para desenvolver apps para iOS e Android com interface nativa</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}
