@@ -31,11 +31,11 @@ server.get ('/bootcamp-page.njk', function (req, res) {
   return res.render ('bootcamp-page')
 })
 
-server.use(function(req, res) {
+server.use (function(req, res) {
   res.status(404).render("not-found");
 });
 
 
 server.listen (5000, function () {
-  console.log ('Server is Running') 
+  console.log ('Server is Running')
 })
