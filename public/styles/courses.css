@@ -10,7 +10,7 @@
 }
 a {
   text-decoration: none;
-
+  color: white;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -53,3 +53,53 @@ header img {
 }
 
 /* ======= MAIN CONTENT ======= */
+section .main {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  background-color: rgb(12, 10, 14);
+  justify-content: center;
+}
+.main .main-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+}
+.main .main-image img {
+  height: 150px;
+}
+.main .main-image img.rocketseatImage {
+  height: 50px
+}
+.main .main-content {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  line-height: 45px;
+  max-width: 700px;
+  margin-top: 50px;
+}
+.main .main-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-button a {
+  font-size: 20px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  color: #111;
+  font-weight: bold;
+}
+
+
+.main .main-button .blue { background-color: #9a6ec4; }
+.main .main-button .orange { background-color: #ff9f0e; }
+.main .main-button .green { background-color: #3bff76ef; }
+.main .main-content .blue { color: #9a6ec4; }
+.main .main-content .orange { color: #ff9f0e; }
+.main .main-content .green { color: #3bff76ef; }

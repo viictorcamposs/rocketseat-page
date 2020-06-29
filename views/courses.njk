@@ -16,7 +16,17 @@
 {% block content %}
   <section>
      <div class="main">
-       
+       <div class="main-image">
+         <img src="{{ item.image }}" alt="Image do curso {{ item.id }}">
+         <img class="rocketseatImage" src="https://rocketseat.com.br/static/images/gostack/logo-rocketseat.svg" alt="">
+       </div>
+       <div class="main-content">
+         <p class="{{ item.color }}">{{ item.strongDescription }}</p>
+         <p>{{ item.description }}</p>
+       </div>
+       <div class="main-button">
+         <a class="{{ item.color }}" href="https://www.rocketseat.com.br/{{ item.id }}" target="_blank">Reservar minha vaga</a>
+       </div>
      </div>
   </section>
 {% endblock %}
