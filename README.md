@@ -3,9 +3,9 @@
 </h1>
 
 ## Índice
-* [Sobre] (#sobre)
-* [Desafio Front End] (#desafio-front-end)
-* [Desafio Back End] (#desafio-back-end)
+* [Sobre](#sobre)
+* [Desafio Front End](#desafio-front-end)
+* [Desafio Back End](#desafio-back-end)
 ---
 ## Sobre
 
