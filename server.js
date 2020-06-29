@@ -11,8 +11,7 @@
 
 const nunjucks = require ('nunjucks')
 const express = require ('express')
-const data = require ('./data')
-
+const courses = require ('./data')
 const server = express ()
  
 server.use (express.static ('public/img'))
@@ -22,9 +21,12 @@ server.use (express.static ('public/scripts'))
 server.set ('view engine', 'njk')
 
 nunjucks.configure ('views', {
-  express: server
+  express: server,
+  autoescape: false,
+  noCache: true
 })
 
+// CONFIGURANDO CAMINHO DA HOME.NJK
 server.get ('/', function (req, res) {
   const cards = [
     {
@@ -62,14 +64,31 @@ server.get ('/', function (req, res) {
   ]
   return res.render ('home', { cards, wrapper: mainDescription })
 })
-server.get ('/bootcamp-page.njk', function (req, res) {
-  return res.render ('bootcamp-page', { items: data }) 
+
+// CONFIGURANDO CAMINHO DA BOOTCAMP-PAGE.NJK
+server.get ('/bootcamp-page', function (req, res) { 
+  return res.render ('bootcamp-page', { items: courses }) 
 })
 
+// CONFIGURANDO CAMINHO DA COURSES.NJK
+server.get ('/courses/:id', function (req, res) {
+  const id = req.params.id
+  const course = courses.find (function (course) {
+    return course.id == id
+  }) 
+
+  if ( !course ) {
+    return res.status (404).render ('not-found')
+  }
+
+  return res.render ('courses', { item: course })
+})
+
+/* CONFIGURANDO CAMINHO DA NOT-FOUND.NJK
 server.use (function(req, res) {
   res.status(404).render("not-found");
 });
-
+*/
 
 server.listen (5000, function () {
   console.log ('Server is Running')
