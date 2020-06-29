@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: "starter",
+    id: "starter",
     color: " blue",
     number: "01",
     image: "https://skylab.rocketseat.com.br/static/media/Starter.64c237cc.svg",
@@ -8,7 +8,7 @@ module.exports = [
     description: "no mercado com esses cursos gratuitos"
   },
   {
-    name: "launchbase",
+    id: "launchbase",
     color: "orange",
     number: "02",
     image: "https://skylab.rocketseat.com.br/static/media/LaunchBase.08285320.svg",
@@ -16,7 +16,7 @@ module.exports = [
     description: "e tenha acesso às melhores oportunidades do mercado"
   },
   {
-    name: "gostack",
+    id: "gostack",
     color: "green",
     number: "03",
     image: "https://skylab.rocketseat.com.br/static/media/GoStack.83a178a0.svg",
