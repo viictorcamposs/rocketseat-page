@@ -1,0 +1,10 @@
+footer {
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: azure;
+}
