@@ -84,11 +84,11 @@ server.get ('/courses/:id', function (req, res) {
   return res.render ('courses', { item: course })
 })
 
-/* CONFIGURANDO CAMINHO DA NOT-FOUND.NJK
+// CONFIGURANDO CAMINHO DA NOT-FOUND.NJK
 server.use (function(req, res) {
   res.status(404).render("not-found");
 });
-*/
+
 
 server.listen (5000, function () {
   console.log ('Server is Running')
